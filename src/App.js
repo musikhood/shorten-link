@@ -1,5 +1,5 @@
 import React from "react";
-import { Nav, Header, ShortenLink, Offers } from "./Layout";
+import { Nav, Header, ShortenLink, Offers, Boost, Footer } from "./Layout";
 
 function App() {
   return (
@@ -8,6 +8,8 @@ function App() {
       <Header />
       <ShortenLink />
       <Offers />
+      <Boost />
+      <Footer />
     </>
   );
 }
