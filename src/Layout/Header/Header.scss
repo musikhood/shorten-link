@@ -1,11 +1,14 @@
 .Header {
-  max-width: 375px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 10px;
+  background-color: white;
+  &__container {
+    max-width: 375px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+  }
   &__img-container {
     margin-bottom: 40px;
     overflow: hidden;

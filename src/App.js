@@ -1,11 +1,13 @@
 import React from "react";
-import { Nav, Header } from "./Layout";
+import { Nav, Header, ShortenLink, Offers } from "./Layout";
 
 function App() {
   return (
     <>
       <Nav />
       <Header />
+      <ShortenLink />
+      <Offers />
     </>
   );
 }
