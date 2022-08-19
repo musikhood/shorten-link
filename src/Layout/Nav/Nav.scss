@@ -8,7 +8,7 @@
 .Nav {
   position: relative;
   width: 100vw;
-  padding: 40px 20px;
+  padding: 30px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -60,16 +60,16 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 30px;
+    gap: 25px;
     position: absolute;
     z-index: 1000;
-    top: 100px;
+    top: 90px;
     left: 50%;
     transform: translateX(-300%);
-    max-width: 275px;
-    width: 80%;
+    max-width: 320px;
+    width: 90%;
     min-width: 200px;
-    height: 400px;
+    height: 350px;
     background-color: var(--darkViolet);
     border-radius: 10px;
     color: white;
@@ -92,7 +92,7 @@
     background-color: var(--line);
   }
   &__mobile-menu-button {
-    width: 90%;
+    width: 80%;
     padding: 10px 0;
     display: flex;
     justify-content: center;

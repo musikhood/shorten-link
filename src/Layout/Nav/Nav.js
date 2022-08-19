@@ -5,7 +5,7 @@ import Logo from "../../../images/logo.svg";
 function Nav() {
   const [openMenu, setOpenMenu] = useState(false);
   return (
-    <div className="Nav">
+    <nav className="Nav">
       <div className="Nav__logo-container">
         <img src={Logo} alt="logo" />
       </div>
@@ -33,7 +33,7 @@ function Nav() {
         <p>Login</p>
         <div className="Nav__mobile-menu-button">Sign Up</div>
       </div>
-    </div>
+    </nav>
   );
 }
 

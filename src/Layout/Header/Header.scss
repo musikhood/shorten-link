@@ -1,0 +1,46 @@
+.Header {
+  max-width: 375px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  &__img-container {
+    margin-bottom: 40px;
+    overflow: hidden;
+    img {
+      transform: translateX(25px);
+      width: 130%;
+    }
+  }
+  &__about {
+    text-align: center;
+    padding: 0 20px;
+    h1 {
+      line-height: 40px;
+      margin-bottom: 15px;
+      font-weight: bold;
+    }
+    p {
+      margin-bottom: 30px;
+      color: var(--grayishViolet);
+    }
+  }
+  &__button {
+    width: 200px;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cyan);
+    border-radius: 50px;
+    transition: background-color 0.2s;
+    color: white;
+    margin: 0 auto;
+    cursor: pointer;
+    &:hover {
+      background-color: var(--lightCyan);
+    }
+  }
+}

@@ -1,10 +1,11 @@
 import React from "react";
-import { Nav } from "./components";
+import { Nav, Header } from "./Layout";
 
 function App() {
   return (
     <>
       <Nav />
+      <Header />
     </>
   );
 }
