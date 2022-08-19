@@ -1,0 +1,108 @@
+@mixin hamburger {
+  width: 28px;
+  height: 4px;
+  background-color: var(--grayishViolet);
+  transition: all 0.2s;
+}
+
+.Nav {
+  position: relative;
+  width: 100vw;
+  padding: 40px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  &__logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__hamburger-menu-container {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  &__hamburger-menu {
+    @include hamburger;
+    position: relative;
+    z-index: 1000;
+    &::before {
+      content: "";
+      position: absolute;
+      top: -10px;
+      left: 0;
+      transform-origin: left;
+      @include hamburger;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      transform-origin: left;
+      @include hamburger;
+    }
+    &--active {
+      background-color: transparent;
+      &::before {
+        transform: rotate(45deg);
+      }
+      &::after {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+  &__mobile-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    position: absolute;
+    z-index: 1000;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-300%);
+    max-width: 275px;
+    width: 80%;
+    min-width: 200px;
+    height: 400px;
+    background-color: var(--darkViolet);
+    border-radius: 10px;
+    color: white;
+    transition: all 0.6s;
+    &--active {
+      transform: translateX(-50%);
+    }
+    p {
+      transition: color 0.2s;
+      cursor: pointer;
+      &:hover {
+        color: var(--gray);
+      }
+    }
+  }
+
+  &__mobile-menu-line {
+    width: 90%;
+    height: 2px;
+    background-color: var(--line);
+  }
+  &__mobile-menu-button {
+    width: 90%;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cyan);
+    border-radius: 50px;
+    transition: background-color 0.2s;
+    cursor: pointer;
+    &:hover {
+      background-color: var(--lightCyan);
+    }
+  }
+}
