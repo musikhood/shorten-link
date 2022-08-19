@@ -8,10 +8,17 @@
     align-items: center;
     flex-direction: column;
     gap: 10px;
+    @media (min-width: 1000px) {
+      flex-direction: row;
+      max-width: 900px;
+    }
   }
   &__img-container {
     margin-bottom: 40px;
     overflow: hidden;
+    @media (min-width: 1000px) {
+      order: 1;
+    }
     img {
       transform: translateX(25px);
       width: 130%;
@@ -20,6 +27,10 @@
   &__about {
     text-align: center;
     padding: 0 20px;
+    @media (min-width: 1000px) {
+      text-align: left;
+      padding: 0;
+    }
     h1 {
       line-height: 40px;
       margin-bottom: 15px;
@@ -42,6 +53,9 @@
     color: white;
     margin: 0 auto;
     cursor: pointer;
+    @media (min-width: 1000px) {
+      margin: 0;
+    }
     &:hover {
       background-color: var(--lightCyan);
     }

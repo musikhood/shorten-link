@@ -1,6 +1,5 @@
 .Box {
   max-width: 375px;
-  min-height: 200px;
   padding: 40px 20px;
   background-color: #fff;
   border-radius: 10px;
@@ -10,6 +9,11 @@
   align-items: center;
   position: relative;
   text-align: center;
+  @media (min-width: 1000px) {
+    text-align: left;
+    align-items: flex-start;
+    max-width: 450px;
+  }
   h3 {
     margin-top: 30px;
   }
@@ -30,5 +34,8 @@
     top: -35px;
     left: 50%;
     transform: translateX(-50%);
+    @media (min-width: 1000px) {
+      left: 60px;
+    }
   }
 }
