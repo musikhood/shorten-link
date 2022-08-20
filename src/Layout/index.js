@@ -4,3 +4,4 @@ export { default as ShortenLink } from "./ShortenLink/ShortenLink";
 export { default as Offers } from "./Offers/Offers";
 export { default as Boost } from "./Boost/Boost";
 export { default as Footer } from "./Footer/Footer";
+export { default as ShortenedLinks } from "./ShortenedLinks/ShortenedLinks";

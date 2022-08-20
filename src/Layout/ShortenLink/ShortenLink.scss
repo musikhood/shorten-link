@@ -1,5 +1,5 @@
 .ShortenLink {
-  padding: 100px 0;
+  padding: 20px 0 20px 0;
   background-image: linear-gradient(
     white 0%,
     white 50%,
@@ -9,6 +9,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  gap: 50px;
   &__container {
     background-image: url("../../../images/bg-shorten-mobile.svg");
     background-color: var(--darkViolet);
@@ -32,7 +34,9 @@
       padding: 40px;
     }
   }
+
   &__input-container {
+    position: relative;
     @media (min-width: 1000px) {
       width: 80%;
     }
@@ -44,16 +48,33 @@
       outline: none;
       padding: 0 15px;
       font-size: 18px;
+      margin-bottom: 10px;
+      @media (min-width: 1000px) {
+        margin: 0;
+      }
       &::placeholder {
         color: var(--gray);
         font-weight: 700;
+        opacity: 0.7;
       }
     }
     &--error {
-      border: 2px solid var(--red);
-      &::placeholder {
-        color: var(--red);
+      input {
+        border: 2px solid var(--red);
+        &::placeholder {
+          color: var(--red);
+        }
       }
+    }
+  }
+  &__input-error {
+    font-size: 12px;
+    font-style: italic;
+    color: var(--red);
+    @media (min-width: 1000px) {
+      position: absolute;
+      bottom: -25px;
+      left: 0;
     }
   }
   &__button {
@@ -66,7 +87,7 @@
     border-radius: 10px;
     transition: background-color 0.2s;
     color: white;
-    margin: 25px auto 0 auto;
+    margin: 15px auto 0 auto;
     cursor: pointer;
     @media (min-width: 1000px) {
       margin: 0;
