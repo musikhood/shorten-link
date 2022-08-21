@@ -3,6 +3,7 @@ import "./LinkBox.scss";
 
 function LinkBox({ link, shortLink }) {
   const [letters, setLetters] = useState(15);
+  const [clicked, setClicked] = useState(false);
 
   useEffect(() => {
     if (window.innerWidth > 999) {
@@ -25,12 +26,17 @@ function LinkBox({ link, shortLink }) {
         <span>{shortLink}</span>
       </p>
       <div
-        className="LinkBox__button"
+        className={
+          !clicked
+            ? "LinkBox__button"
+            : "LinkBox__button LinkBox__button--active"
+        }
         onClick={() => {
           navigator.clipboard.writeText(String(shortLink));
+          setClicked(true);
         }}
       >
-        Copy
+        {!clicked ? "copy" : "copied!"}
       </div>
     </div>
   );

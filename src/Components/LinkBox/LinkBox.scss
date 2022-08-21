@@ -53,12 +53,19 @@
     color: white;
     margin: 0 auto;
     cursor: pointer;
+
     @media (min-width: 1000px) {
       margin: 0;
       width: 200px;
     }
     &:hover {
       background-color: var(--lightCyan);
+    }
+    &--active {
+      background-color: var(--darkViolet);
+      &:hover {
+        background-color: var(--veryDarkViolet);
+      }
     }
   }
 }
